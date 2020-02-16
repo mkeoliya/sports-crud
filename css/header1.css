@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:500);
+@import url(https://fonts.googleapis.com/css?family=Oswald:700);
+.snip1316 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  color: #bdbdbd;
+  margin: 30px 25px;
+  max-width: 285px;
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.snip1316 h1,
+.snip1316 h5 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.snip1316 h1 {
+  font-family: 'Oswald', Arial, sans-serif;
+  font-size: 3em;
+  line-height: 88px;
+  font-weight: 700;
+  position: relative;
+  color: #212121;
+  text-align: center;
+  margin: 0 0 4px;
+}
+.snip1316 h1:before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 80px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  border-width: 15px 130px;
+  border-style: solid;
+  border-color: transparent #bdbdbd transparent #bdbdbd;
+  z-index: -1;
+}
+.snip1316 h5 {
+  margin: 0 40px;
+  padding: 5px 0;
+  font-weight: 500;
+}
+.snip1316 h6 {
+  margin: 0 0 2px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+/* Demo purposes only */
+body {
+  background-color: #212121;
+}
