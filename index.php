@@ -68,11 +68,11 @@ include("header-files/header.php");
 include("header-files/conn.php");
 if(isset($_POST['submit1']))
 {
-	header('Location: pointsHome.php');
+	header('Location: tabulation/pointsHome.php');
 }
 if(isset($_POST['submit2']))
 {
-	header('Location: result.php');
+	header('Location: tabulation/result.php');
 }
 
 ?>

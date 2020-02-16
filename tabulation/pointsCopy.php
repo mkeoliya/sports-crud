@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>DBPC Sports '16 Tabulation</title>
-<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="../css/index.css" rel="stylesheet" type="text/css">
     <link href="css/style2.css" rel="stylesheet" type="text/css">
 <style type="text/css">
     body,td,th {
 	color: #FFFFFF;
-	
+
 }
 .styled select {
 	-webkit-appearance: button;
@@ -35,14 +35,14 @@
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }
- 
+
 input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid rgba(81, 203, 238, 1);
 }
-	
+
   background: transparent;
   width: 150px;
   font-size: 20px;
@@ -56,7 +56,7 @@ input[type=text]:focus, textarea:focus {
   border: 1px solid #111;
   border-radius: 3px;
   overflow: hidden;
-  
+
 }
 </style>
 </head>
@@ -64,9 +64,9 @@ input[type=text]:focus, textarea:focus {
 <body>
 <?php
 session_start();
-include("header1.php");
-include("header.php");
-include("conn.php");
+include("../header-files/header1.php");
+include("../header-files/header.php");
+include("../header-files/conn.php");
 
 if(isset($_POST['submit'])){
 	$pos1=$_POST['name1'];
@@ -79,7 +79,7 @@ if(isset($_POST['submit'])){
 	$_SESSION['pos4']=$pos4;
 	$_SESSION['event']=$_POST['event'];
 	header('Location: check.php?pos1='.$pos1.'&pos2='.$pos2.'&pos3='.$pos3.'&event='.$_POST['event']);
-	
+
 }
 
 ?>
@@ -105,11 +105,11 @@ $result_pulldown = mysqli_query($con,$pulldown);
 while($data=mysqli_fetch_assoc($result_pulldown)){
 	extract($data);
 	$cat_value=$data['id'];
-	
-	
-        
+
+
+
          echo '<option value="' . $data['event_name'] . '">' . $data['event_name'] . '</option>';
-        
+
 }
 
 ?>
@@ -124,11 +124,11 @@ $result_pulldown = mysqli_query($con,$pulldown);
 while($data=mysqli_fetch_assoc($result_pulldown)){
 	extract($data);
 	$cat_value=$data['id'];
-	
-	
-        
+
+
+
          echo '<option value="' . $data['part_name'] . '">' . $data['part_name'] . '</option>';
-        
+
 }
 
 
@@ -145,11 +145,11 @@ $result_pulldown = mysqli_query($con,$pulldown);
 while($data=mysqli_fetch_assoc($result_pulldown)){
 	extract($data);
 	$cat_value=$data['id'];
-	
-	
-        
+
+
+
          echo '<option value="' . $data['part_name'] . '">' . $data['part_name'] . '</option>';
-        
+
 }
 
 
@@ -167,11 +167,11 @@ $result_pulldown = mysqli_query($con,$pulldown);
 while($data=mysqli_fetch_assoc($result_pulldown)){
 	extract($data);
 	$cat_value=$data['id'];
-	
-	
-        
+
+
+
          echo '<option value="' . $data['part_name'] . '">' . $data['part_name'] . '</option>';
-        
+
 }
 
 
@@ -189,11 +189,11 @@ $result_pulldown = mysqli_query($con,$pulldown);
 while($data=mysqli_fetch_assoc($result_pulldown)){
 	extract($data);
 	$cat_value=$data['id'];
-	
-	
-        
+
+
+
          echo '<option value="' . $data['part_name'] . '">' . $data['part_name'] . '</option>';
-        
+
 }
 
 

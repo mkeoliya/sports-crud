@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Review the Entry</title>
-<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="../css/index.css" rel="stylesheet" type="text/css">
     <link href="css/style2.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 body,td,th {
@@ -15,9 +15,9 @@ body,td,th {
 <body>
 <?php
 session_start();
-include("header1.php");
-include("header.php");
-include("conn.php");
+include("../header-files/header1.php");
+include("../header-files/header.php");
+include("../header-files/conn.php");
 $pos1 = $_SESSION['pos1'];
 $pos2 = $_SESSION['pos2'];
 $pos3 = $_SESSION['pos3'];
@@ -47,7 +47,7 @@ $sql_eventPoint = mysqli_query($con,"SELECT * FROM events WHERE event_name= '".$
 while($data4=mysqli_fetch_array($sql_eventPoint)){
 	extract($data4);
 	$point1 = $data4['point1'];
-		
+
 }
 $sql_eventPoint = mysqli_query($con,"SELECT * FROM events WHERE event_name= '".$event."'");
 while($data4=mysqli_fetch_array($sql_eventPoint)){
@@ -56,9 +56,9 @@ while($data4=mysqli_fetch_array($sql_eventPoint)){
 }
 	$sql_eventPoint2 = mysqli_query($con,"SELECT * FROM events WHERE event_name= '".$event."'");
 while($data4=mysqli_fetch_array($sql_eventPoint2)){
-	
+
 	extract($data4);
-	
+
 	$point3 = $data4['point3'];
 }
 	$sql_eventPoint3 = mysqli_query($con,"SELECT * FROM events WHERE event_name= '".$event."'");

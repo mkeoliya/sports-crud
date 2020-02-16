@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Result Generation</title>
-<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="../css/index.css" rel="stylesheet" type="text/css">
     <link href="css/style2.css" rel="stylesheet" type="text/css">
 <style>
 
@@ -13,13 +13,13 @@ table {
 }
 
 th, td {
-  
- 
+
+
     padding: 20px;
     text-align: center;
  text-shadow:#747474;
     border-bottom: 1px solid #ddd;
- 
+
 }
 
 tbody:nth-child(even) {background-color: #747474}
@@ -38,9 +38,9 @@ body,td,th {
 <body>
 <?php
 session_start();
-include("header1.php");
-include("header.php");
-include("conn.php");
+include("../header-files/header1.php");
+include("../header-files/header.php");
+include("../header-files/conn.php");
 $sql_red=mysqli_query($con,"SELECT * FROM red");
 while($data1=mysqli_fetch_array($sql_red)){
 	extract($data1);
@@ -113,7 +113,7 @@ $max_f=$row['max'];
     <td bgcolor="#FFFFFF" style="color:Black; height:15px"><?php echo $point_green; ?></td>
     <td bgcolor="#FFFFFF" style="color:Black; height:15px"><?php echo $point_yellow; ?></td>
     </tr>
- 
+
 </table>
 <br>
 <br>
@@ -122,7 +122,7 @@ $max_f=$row['max'];
 <br>
 <br>
 <br>
-<br>	
+<br>
 <font size="+3">Division A: <br></font>
 
 
@@ -132,7 +132,7 @@ $sql1 = mysqli_query($con,"SELECT * FROM participants WHERE points = '".$max_a."
 while($data1 = mysqli_fetch_array($sql1)){
 	extract($data1);
 echo $data1['part_name']." (".$max_a.") <br>";
-	
+
 }
 ?>
 <br>
@@ -144,7 +144,7 @@ $sql2 = mysqli_query($con,"SELECT * FROM participants WHERE points = '".$max_b."
 while($data2 = mysqli_fetch_array($sql2)){
 	extract($data2);
 echo $data2['part_name']." (".$max_b.") <br>";
-	
+
 }
 ?>
 <br>
@@ -156,7 +156,7 @@ $sql3 = mysqli_query($con,"SELECT * FROM participants WHERE points = '".$max_c."
 while($data3 = mysqli_fetch_array($sql3)){
 	extract($data3);
 echo $data3['part_name']." (".$max_c.") <br>";
-	
+
 }
 ?>
 <br>
@@ -168,7 +168,7 @@ $sql4 = mysqli_query($con,"SELECT * FROM participants WHERE points = '".$max_d."
 while($data4 = mysqli_fetch_array($sql4)){
 	extract($data4);
 echo $data4['part_name']." (".$max_d.") <br>";
-	
+
 }
 ?>
 <br>
@@ -180,7 +180,7 @@ $sql5 = mysqli_query($con,"SELECT * FROM participants WHERE points = '".$max_e."
 while($data5 = mysqli_fetch_array($sql5)){
 	extract($data5);
 echo $data5['part_name']." (".$max_e.") <br>";
-	
+
 }
 ?>
 <br>
@@ -192,7 +192,7 @@ $sql6 = mysqli_query($con,"SELECT * FROM participants WHERE points = '".$max_f."
 while($data6 = mysqli_fetch_array($sql6)){
 	extract($data6);
 echo $data6['part_name']." (".$max_f.") <br>";
-	
+
 }
 ?>
 

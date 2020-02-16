@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>Don Bosco Sports Management System</title>
-<link href="css/index.css" rel="stylesheet" type="text/css">
+<link href="../css/index.css" rel="stylesheet" type="text/css">
     <link href="css/style2.css" rel="stylesheet" type="text/css">
 <style type="text/css">
     body,td,th {
 	color: #FFFFFF;
-	
+
 }
 .styled select {
 	-webkit-appearance: button;
@@ -35,14 +35,14 @@
   margin: 5px 1px 3px 0px;
   border: 1px solid #DDDDDD;
 }
- 
+
 input[type=text]:focus, textarea:focus {
   box-shadow: 0 0 5px rgba(81, 203, 238, 1);
   padding: 3px 0px 3px 3px;
   margin: 5px 1px 3px 0px;
   border: 1px solid rgba(81, 203, 238, 1);
 }
-	
+
   background: transparent;
   width: 150px;
   font-size: 20px;
@@ -56,16 +56,16 @@ input[type=text]:focus, textarea:focus {
   border: 1px solid #111;
   border-radius: 3px;
   overflow: hidden;
-  
+
 }
 </style>
 </head>
 
 <body>
 <?php
-include("header1.php");
-include("header.php");
-include("conn.php");
+include("../header-files/header1.php");
+include("../header-files/header.php");
+include("../header-files/conn.php");
 ?>
 <br>
 <br>
